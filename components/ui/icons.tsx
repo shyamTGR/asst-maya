@@ -4,7 +4,7 @@ import * as React from 'react'
 
 import { cn } from '@/lib/utils'
 type IconNextChatProps = React.ComponentProps<'img'>;
-function IconNextChat({ className, ...props }: IconOpenAIProps) {
+function IconNextChat({ className, ...props }: IconNextChatProps) {
   return (
     <img
       src="/logo.png" // Update this path to your actual PNG file location
