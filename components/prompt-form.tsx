@@ -1,10 +1,8 @@
 'use client'
-
 import * as React from 'react'
 import Textarea from 'react-textarea-autosize'
 
 import { useActions, useUIState } from 'ai/rsc'
-
 import { UserMessage } from './stocks/message'
 import { type AI } from '@/lib/chat/actions'
 import { Button } from '@/components/ui/button'
@@ -17,8 +15,6 @@ import {
 import { useEnterSubmit } from '@/lib/hooks/use-enter-submit'
 import { nanoid } from 'nanoid'
 import { useRouter } from 'next/navigation'
-
-
 export function PromptForm({
   input,
   setInput
@@ -31,28 +27,23 @@ export function PromptForm({
   const inputRef = React.useRef<HTMLTextAreaElement>(null)
   const { submitUserMessage } = useActions()
   const [_, setMessages] = useUIState<typeof AI>()
-
   React.useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus()
     }
   }, [])
-
   return (
     <form
       ref={formRef}
       onSubmit={async (e: any) => {
         e.preventDefault()
-
         // Blur focus on mobile
         if (window.innerWidth < 600) {
           e.target['message']?.blur()
         }
-
         const value = input.trim()
         setInput('')
         if (!value) return
-
         // Optimistically add user message UI
         setMessages(currentMessages => [
           ...currentMessages,
@@ -61,7 +52,6 @@ export function PromptForm({
             display: <UserMessage>{value}</UserMessage>
           }
         ])
-
         // Submit and get response message
         const responseMessage = await submitUserMessage(value)
         setMessages(currentMessages => [...currentMessages, responseMessage])
