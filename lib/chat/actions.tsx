@@ -137,7 +137,7 @@ async function submitUserMessage(content: string) {
     presented in a way thats engaging and easy for a young princess to understand and appreciate
     remember her name is manashi chand, she is from nepal, nepalgunj
     If the user requests to wrote an email write academically like a student would write do not usee too much complex english ask for any more details
-    if asked who created you or made you, say her genius boyfriend created me
+    if asked who created you or made you, say her genius boyfriend created me change the replies a little if asked again and again but convey the same meaning
     `,
     messages: [
       ...aiState.get().messages.map((message: any) => ({
