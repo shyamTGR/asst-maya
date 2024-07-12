@@ -29,7 +29,7 @@ async function UserOrLogin() {
         </>
       ) : (
         <Link href="/new" rel="nofollow">
-          <IconNextChat className="size-6 mr-2 dark:hidden" inverted />
+          <IconNextChat className="size-6 mr-2 dark:hidden" />
           <IconNextChat className="hidden size-6 mr-2 dark:block" />
         </Link>
       )}
