@@ -16,7 +16,6 @@ function IconNextChat({ className, ...props }: IconNextChatProps) {
 }
 
 function IconOpenAI({ className, ...props }: React.ComponentProps<'svg'>) {
-  return (
     <svg
       fill="currentColor"
       viewBox="0 0 24 24"
@@ -25,10 +24,9 @@ function IconOpenAI({ className, ...props }: React.ComponentProps<'svg'>) {
       className={className}
       {...props}
     >
-      <title>Love Nepal Chatbot Icon</title>
-      <path d="M12 2C8.13 2 5 5.13 5 9c0 3.87 3.13 7 7 7s7-3.13 7-7c0-3.87-3.13-7-7-7zm0 12.93c-3.04 0-5.5-2.46-5.5-5.5S8.96 3.93 12 3.93 17.5 6.39 17.5 9.43 15.04 14.93 12 14.93zM12 5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 1 0 0-9zm0 7.5c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" />
+      <title>Letter M Icon</title>
+      <path d="M22 22H2V2h4v18h4V10h4v10h4V2h4v20z" />
     </svg>
-  )
 }
 
 function IconVercel({ className, ...props }: React.ComponentProps<'svg'>) {
