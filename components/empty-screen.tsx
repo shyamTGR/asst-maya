@@ -11,6 +11,8 @@ export function EmptyScreen() {
         <h1 className="text-lg font-semibold">
           Welcome Mayaa!
         </h1>
+        <img src="https://static.vecteezy.com/system/resources/previews/025/279/123/original/sunflower-bouquet-illustration-decor-png.png" alt="Description of Image" />
+
       </div>
     </div>
   )
