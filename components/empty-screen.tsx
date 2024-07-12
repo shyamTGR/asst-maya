@@ -11,7 +11,7 @@ export function EmptyScreen() {
         <h1 className="text-lg font-semibold">
           Welcome Mayaa!
         </h1>
-<img src="https://example.com/path-to-your-image.jpg" alt="Description of Image" className="responsive-img" />
+<img src="https://static.vecteezy.com/system/resources/previews/025/279/123/original/sunflower-bouquet-illustration-decor-png.png" alt="Description of Image" className="responsive-img" />
       </div>
       <style jsx>{`
         .responsive-img {
