@@ -16,7 +16,7 @@ function IconNextChat({ className, ...props }: IconNextChatProps) {
 }
 
 function IconOpenAI({ className, ...props }: React.ComponentProps<'svg'>) {
-    <svg
+    return ( <svg
       fill="currentColor"
       viewBox="0 0 24 24"
       role="img"
@@ -26,7 +26,7 @@ function IconOpenAI({ className, ...props }: React.ComponentProps<'svg'>) {
     >
       <title>Letter M Icon</title>
       <path d="M22 22H2V2h4v18h4V10h4v10h4V2h4v20z" />
-    </svg>
+    </svg>)
 }
 
 function IconVercel({ className, ...props }: React.ComponentProps<'svg'>) {
