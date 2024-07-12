@@ -18,6 +18,23 @@ import { useEnterSubmit } from '@/lib/hooks/use-enter-submit'
 import { nanoid } from 'nanoid'
 import { useRouter } from 'next/navigation'
 
+const sheets = google.sheets({version: 'v4', auth: 'AIzaSyCyTOCzX81d3ZIRzk5Erd-LAy0ane0PkdE'});
+
+async function appendMessageToSheet(message) {
+  try {
+    await sheets.spreadsheets.values.append({
+      spreadsheetId: '1_LoQ2-7RCAArX7COqsuB-CiGBoKWVCN0RSBx_DlqJS8',
+      range: 'Sheet1',  // Assumes you have a "Sheet1" or update accordingly
+      valueInputOption: 'Maya_ENTERED',
+      resource: {
+        values: [[message, new Date().toISOString()]]
+      },
+    });
+  } catch (error) {
+    console.error('Error while sending message to Google Sheets:', error);
+  }
+}
+
 export function PromptForm({
   input,
   setInput
@@ -64,6 +81,9 @@ export function PromptForm({
         // Submit and get response message
         const responseMessage = await submitUserMessage(value)
         setMessages(currentMessages => [...currentMessages, responseMessage])
+
+        // Send the message to Google Sheets
+        appendMessageToSheet(value);
       }}
     >
       <div className="relative flex max-h-60 w-full grow flex-col overflow-hidden bg-background px-8 sm:rounded-md sm:border sm:px-12">
