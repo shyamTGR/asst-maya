@@ -3,8 +3,8 @@
 import * as React from 'react'
 
 import { cn } from '@/lib/utils'
-
-function IconNextChat({
+type IconNextChatProps = React.ComponentProps<'img'>;
+function IconNextChat({ className, ...props }: IconOpenAIProps) {
   return (
     <img
       src="/logo.png" // Update this path to your actual PNG file location
@@ -12,8 +12,7 @@ function IconNextChat({
       className={cn('size-4', className)}
       {...props}
     />
-
-  )
+  );
 }
 
 function IconOpenAI({ className, ...props }: React.ComponentProps<'svg'>) {
