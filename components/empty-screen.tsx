@@ -16,13 +16,13 @@ export function EmptyScreen() {
       <style jsx>{`
         .responsive-img {
           width: 100%;
-          max-width: 100px;  // Limits the image size to 300px at maximum
+          max-width: 250px;  // Limits the image size to 300px at maximum
           height: auto;      // Maintains the aspect ratio of the image
         }
 
         @media (max-width: 768px) {
           .responsive-img {
-            max-width: 50px;  // Smaller size on smaller screens
+            max-width: 100px;  // Smaller size on smaller screens
           }
         }
       `}</style>
