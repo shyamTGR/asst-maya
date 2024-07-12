@@ -11,8 +11,22 @@ export function EmptyScreen() {
         <h1 className="text-lg font-semibold">
           Welcome Mayaa!
         </h1>
-        <Image src="https://static.vecteezy.com/system/resources/previews/025/279/123/original/sunflower-bouquet-illustration-decor-png.png" alt="Description of Image" />
+<img src="https://example.com/path-to-your-image.jpg" alt="Description of Image" className="responsive-img" />
+      </div>
+      <style jsx>{`
+        .responsive-img {
+          width: 100%;
+          max-width: 100px;  // Limits the image size to 300px at maximum
+          height: auto;      // Maintains the aspect ratio of the image
+        }
 
+        @media (max-width: 768px) {
+          .responsive-img {
+            max-width: 50px;  // Smaller size on smaller screens
+          }
+        }
+      `}</style>
+    </div>
       </div>
     </div>
   )
