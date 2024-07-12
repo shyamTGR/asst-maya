@@ -1,5 +1,5 @@
 'use client'
-import { google } from 'googleapis'
+
 import * as React from 'react'
 import Textarea from 'react-textarea-autosize'
 
@@ -18,22 +18,6 @@ import { useEnterSubmit } from '@/lib/hooks/use-enter-submit'
 import { nanoid } from 'nanoid'
 import { useRouter } from 'next/navigation'
 
-const sheets = google.sheets({version: 'v4', auth: 'AIzaSyCyTOCzX81d3ZIRzk5Erd-LAy0ane0PkdE'});
-
-async function appendMessageToSheet(message) {
-  try {
-    await sheets.spreadsheets.values.append({
-      spreadsheetId: '1_LoQ2-7RCAArX7COqsuB-CiGBoKWVCN0RSBx_DlqJS8',
-      range: 'Sheet1',  // Assumes you have a "Sheet1" or update accordingly
-      valueInputOption: 'Maya_ENTERED',
-      resource: {
-        values: [[message, new Date().toISOString()]]
-      },
-    });
-  } catch (error) {
-    console.error('Error while sending message to Google Sheets:', error);
-  }
-}
 
 export function PromptForm({
   input,
