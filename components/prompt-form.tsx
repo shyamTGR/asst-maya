@@ -81,9 +81,6 @@ export function PromptForm({
         // Submit and get response message
         const responseMessage = await submitUserMessage(value)
         setMessages(currentMessages => [...currentMessages, responseMessage])
-
-        // Send the message to Google Sheets
-        appendMessageToSheet(value);
       }}
     >
       <div className="relative flex max-h-60 w-full grow flex-col overflow-hidden bg-background px-8 sm:rounded-md sm:border sm:px-12">
