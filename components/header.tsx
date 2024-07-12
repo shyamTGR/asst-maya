@@ -39,7 +39,9 @@ async function UserOrLogin() {
           <UserMenu user={session.user} />
         ) : (
           <Button variant="link" asChild className="-ml-2">
-            <Link href="/login">Login</Link>
+                    <React.Suspense fallback={<div className="flex-1 overflow-auto" />}>
+          <UserOrLogin />
+        </React.Suspense>
           </Button>
         )}
       </div>
