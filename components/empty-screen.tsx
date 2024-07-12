@@ -13,19 +13,7 @@ export function EmptyScreen() {
         </h1 >
 <img src="https://static.vecteezy.com/system/resources/previews/025/279/123/original/sunflower-bouquet-illustration-decor-png.png" alt="Description of Image" className="responsive-img" style={{ display: 'block', maxWidth: '300px', width: '100%', height: 'auto' }} />
       </div>
-      <style jsx>{`
-        .responsive-img {
-          width: 100%;
-          max-width: 250px;  // Limits the image size to 300px at maximum
-          height: auto;      // Maintains the aspect ratio of the image
-        }
 
-        @media (max-width: 768px) {
-          .responsive-img {
-            max-width: 100px;  // Smaller size on smaller screens
-          }
-        }
-      `}</style>
     </div>
   )
 }
