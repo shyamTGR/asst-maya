@@ -5,16 +5,10 @@ import * as React from 'react'
 import { cn } from '@/lib/utils'
 
 function IconNextChat({
-  className,
-  inverted,
-  ...props
-}: React.ComponentProps<'svg'> & { inverted?: boolean }) {
-  const id = React.useId()
-
   return (
- <img
-      src="/logo.png"
-      alt="OpenAI icon"
+    <img
+      src="/logo.png" // Update this path to your actual PNG file location
+      alt="maya logo"
       className={cn('size-4', className)}
       {...props}
     />
