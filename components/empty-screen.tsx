@@ -27,7 +27,5 @@ export function EmptyScreen() {
         }
       `}</style>
     </div>
-      </div>
-    </div>
   )
 }
